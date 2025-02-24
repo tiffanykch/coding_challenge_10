@@ -39,6 +39,7 @@ class Order {
         this.quantity = quantity;
     }
 
+    // Add method to return order details
     getOrderDetails() {
         let totalPrice = this.quantity * this.product.price;
         let newStock = this.product.updateStock(this.quantity);
@@ -52,3 +53,20 @@ const order1 = new Order(501, prod1, 2);
 console.log(order1.getOrderDetails());
 
 console.log(prod1.getDetails());
+
+// TASK 3: CREATING AN INVENTORY CLASS
+
+// Create Inventory class containing product array
+class Inventory {
+    constructor(product) {
+        this.products = []
+    }
+
+    // 
+    addProduct(product) {
+        this.products.push(product)
+    }
+
+
+
+}
